@@ -4,7 +4,7 @@
 
 ```bash
 $ git clone https://github.com/Julia-Chubatyuk/tetris
-$ cd tetris 
+$ cd tetris/
 $ npm i --quiet
 ```
 
