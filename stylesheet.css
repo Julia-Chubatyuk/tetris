@@ -1,0 +1,33 @@
+header {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+.button {
+    border: 0;
+    border-radius: 3px;
+}
+
+.options-wrapper {
+    margin-left: 350px;
+}
+
+.canvas {
+    float: left;
+}
+
+.options-wrapper  .button-groups > button {
+    font-size: 19px;
+    padding: 3px;
+    width: 34px;
+}
+
+.options-wrapper .options .start-button {
+    font-size: 14px;
+    padding: 8px;
+}
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+</head>
+<body>
+
+    <canvas class="canvas" id="canvas" width="300" height="300"></canvas>
+    <div class="options-wrapper">
+
+        <section class="options">
+            <header>Score: <span id="score"></span></header>
+            <button id="start" class="button start-button">New game</button>
+        </section>
+        <header id="gameOver"></header>
+    </div>
+
+    <script src="../build/app.bundle.js"></script>
+    <script src="../node_modules/event-pubsub/event-pubsub-browser.js"></script>
+</body>
+</html>
