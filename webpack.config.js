@@ -19,21 +19,49 @@ const webpackConfig = new Promise((res, rej) => {
                 path: __dirname + "/build/",
                 filename: "[name].bundle.js",
             },
-            stats: "none",
+            stats:{
+                assets: false,
+                cached: false,
+                cachedAssets: false,
+                children: false,
+                chunks: false,
+                chunkModules: false,
+                chunkOrigins: false,
+                colors: false,
+                depth: false,
+                entrypoints: false,
+                errors: true,
+                errorDetails: true,
+                hash: false,
+                maxModules: 0,
+                modules: false,
+                performance: false,
+                providedExports: false,
+                publicPath: false,
+                reasons: false,
+                source: false,
+                timings: false,
+                usedExports: false,
+                version: false,
+                warnings: false
+            },
             plugins: [
                 new HtmlWebpackPlugin({
                     template: __dirname + `/${result.game}/index.html`,
                     title: `${result.game}`,
                     filename: 'build.html'
                 }),
-                new WebpackOnBuildPlugin(() => open(__dirname + "/build/build.html"))
+                new WebpackOnBuildPlugin(() => {open(__dirname + "/build/build.html")})
             ],
             module: {
                 rules: [{
                     test: /\.js$/,
                     use:[{
                         loader: "babel-loader",
-                        options: { presets: ["es2015"] }
+                        options: {
+                            presets: ["es2015"],
+                            compact: true
+                        }
                     }]
                 }]
             }
